@@ -121,4 +121,73 @@ echo "<br><b><i> b. logical xor (||,or) </i></b> <br> ";
 var_dump (true xor false); //bool(true);
 var_dump (true xor false); //bool(false);
 
+// Tommorow -String operations
+// String operations
+// Operators for working with strings
+// Concatenation(.)
+$firstName = "Fidel";
+$lastName = "Odhiambo";
+$fullname= "<br>" . $firstName ." ".  $lastName . "<br>";
+echo $fullname; //Fidel Odhiambo
+
+// Concatenaton assignment(=.)
+$text = "Hello";
+$text .= " World!"; //$text now conatins hello World
+$text .=" !";// Text now contains hello world
+echo $text . "<br>";
+
+// Array Operators
+// Operators for working with arrays 
+// Union (+)
+$array1 = ["a" => "apple", "b" =>"banana"];
+$array2 = ["b" =>"blueberry", "c"=> "cherry"];
+$result = $array1 + $array2;
+var_dump( $result);
+// Result; ["a" => "apple", "b" =>"banana", "c"=> "cherry"]
+// Note ; if keys exist in both arrays, the first array's value are kept
+echo "<br>";
+// Equality(==)
+$array1 =[1, 2, 3];
+$array2 =[1, 2, 3];
+var_dump($array1 == $array2);// bool(true)
+
+echo "<br>";
+// Identity (===)
+$array1 =[1, 2, 3];
+$array2 =["1", "2", "3"];
+var_dump($array1 === $array2);// bool(false) diffrent types
+
+echo "<br>";
+// Inequality(!=, <>)
+var_dump($array1 == $array2);// bool(true)
+
+echo "<br>";
+// Non-Identity (!==)
+var_dump($array1 !== $array2);
+
+echo "<br>";
+// Increment decrement operators
+
+// These operators increase or decrease variables by one
+// Pre-increment(++$x)
+$x = 5;
+$y = ++$x; // $x will be incremented to 6 then added to $y  
+// $x is 6 and $y is 6
+
+echo $x."<br>";
+echo $y."<br>";
+
+// post increment ($x++)
+$x = 5;
+$y = $x++; // $x is assigned to $y then incremented to 6
+// $x is 6 while $y is 5
+echo $x."<br>";
+echo $y."<br>";
+
+// Predecrement (--$x)
+$x = 5;
+$y = --$x;// $x will be decremented to 4 then assigned to $y
+// $x is 4 while $y is 4
+echo $x."<br>";
+echo $y."<br>";
 ?>
